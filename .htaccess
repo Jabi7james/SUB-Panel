@@ -5,3 +5,8 @@ RewriteRule ^u/([^/]+)$ user.php?username=$1 [L,QSA]
 RewriteRule ^login$ login.php [L]
 RewriteRule ^admin$ admin.php [L]
 RewriteRule ^logout$ logout.php [L]
+
+<Files "*.db">
+    Order allow,deny
+    Deny from all
+</Files>
