@@ -95,14 +95,28 @@
 
 ---
 
-![نمای پنل کاربری](11.pngimages/)
+---
 
-![نمای پنل کاربری](12.images/png)
+## 📸 اسکرین‌شات‌ها (Screenshots)
 
-![نمای پنل کاربری](13.images/png)
-
-![نمای پنل کاربری](14.images/png)
-
+<table>
+  <tr>
+    <td width="50%">
+      <img src="images/1.png" alt="تصویر ۱">
+    </td>
+    <td width="50%">
+      <img src="images/2.png" alt="تصویر ۲">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="images/3.png" alt="تصویر ۳">
+    </td>
+    <td width="50%">
+      <img src="images/4.png" alt="تصویر ۴">
+    </td>
+  </tr>
+</table>
 
 ## ❤️ حمایت و توسعه
 
