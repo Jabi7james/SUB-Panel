@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: var(--bg-dark);
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('bg.jpg') no-repeat center center fixed;
     color: var(--text-color);
     font-family: 'Vazirmatn', sans-serif;
     margin: 0;
