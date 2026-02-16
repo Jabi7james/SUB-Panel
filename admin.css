@@ -270,7 +270,7 @@ body {
 @media (min-width: 769px) {
     .user-link-row .user-link-label {
         order: 1;
-        width: 220px !important; /* هم‌اندازه با باکس "نام لینک" */
+        width: 100px !important; /* هم‌اندازه با باکس "نام لینک" */
         flex-shrink: 0;
     }
     
@@ -282,7 +282,7 @@ body {
     
     .user-link-row .btn-copy-link {
         order: 3;
-        width: 160px !important; /* هم‌اندازه با دکمه‌های عملیاتی */
+        width: 100px !important; /* هم‌اندازه با دکمه‌های عملیاتی */
         flex-shrink: 0;
     }
 }
