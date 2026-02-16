@@ -1,0 +1,122 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --orange: #f05f40;
+    --red: #dc3545;
+    --dark-badge: rgba(0, 0, 0, 0.6); /* رنگ زمینه تیره برای نام لینک */
+}
+
+body {
+    margin: 0;
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff !important; /* اجبار رنگ سفید برای کل صفحه */
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; width: 100%; padding-bottom: 80px; }
+
+/* کادر شیشه‌ای اصلی */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px; /* فاصله بین باکس‌ها */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: #fff !important;
+}
+
+/* باکس نام یوزر و لینک (تیره و سفید) */
+.name-badge {
+    background: var(--dark-badge);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 100%; /* تمام عرض */
+    font-size: 1.1rem;
+}
+
+/* دکمه‌های معمولی */
+.btn-custom {
+    border: none;
+    color: white !important;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none !important;
+}
+
+/* دکمه‌های عملیاتی (کپی و QR) با ارتفاع کمتر */
+.btn-action {
+    height: 40px; /* ارتفاع کمتر طبق درخواست (70% قبلی) */
+    font-size: 0.9rem;
+}
+
+/* دکمه‌های بزرگتر (مثل خروج و ورود) */
+.btn-lg-custom {
+    height: 50px;
+    font-size: 1rem;
+}
+
+.btn-orange { background: var(--orange); }
+.btn-red { background: var(--red); }
+
+/* چیدمان دکمه‌ها کنار هم */
+.btn-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px; /* فاصله از نام لینک */
+}
+
+/* عنوان صفحه */
+.page-title {
+    color: #f0f0f0 !important;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* فوتر */
+footer {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; bottom: 0; left: 0; z-index: 100;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-box { display: inline-flex; flex-direction: column; align-items: center; margin: 0 20px; }
+.footer-box i { font-size: 1.5rem; color: var(--orange); margin-bottom: 5px; }
+.footer-box span { font-size: 0.8rem; font-family: 'Montserrat', sans-serif; color: #fff; }
+
+/* ورودی لاگین */
+.input-glass {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    color: white !important;
+    width: 100%;
+    text-align: center;
+}
