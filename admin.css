@@ -290,3 +290,46 @@ body {
         flex-shrink: 0;
     }
 }
+
+/* =========================================
+   تنظیمات دکمه‌های ویرایش/حذف لینک‌ها
+   ========================================= */
+
+.link-actions-group {
+    display: flex;
+    gap: 5px;
+}
+
+.link-actions-group .btn-action {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 0; /* هم ارتفاع با سایر باکس‌های فرم */
+    font-size: 0.9rem;
+}
+
+/* در دسکتاپ: یکدست کردن اندازه ستون سمت چپ (همه دکمه‌ها) */
+@media (min-width: 769px) {
+    .link-row .link-actions-group {
+        order: 3;
+        width: 170px !important; /* فضای کافی برای قرارگیری 2 دکمه در کنار هم */
+        flex-shrink: 0;
+    }
+    
+    /* برای هم‌تراز ماندن دکمه‌های "اضافه کردن" و "کپی"، سایز آن‌ها هم تنظیم می‌شود */
+    .link-row .btn-link-action {
+        width: 170px !important;
+    }
+}
+
+/* در موبایل: چینش تمیز و ریسپانسیو */
+@media (max-width: 768px) {
+    .link-actions-group {
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    /* در موبایل نوشته دکمه مخفی می‌شود و فقط آیکون می‌ماند تا جا باز شود */
+    .link-actions-group .btn-action span {
+        display: none;
+    }
+}
