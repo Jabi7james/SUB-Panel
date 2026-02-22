@@ -6,7 +6,7 @@
     --glass-border: rgba(255, 255, 255, 0.2);
     --orange: #f05f40;
     --red: #dc3545;
-    --dark-badge: rgba(0, 0, 0, 0.6); /* رنگ زمینه تیره برای نام لینک */
+    --dark-badge: rgba(0, 0, 0, 0.6);
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     font-family: 'Vazirmatn', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff !important; /* اجبار رنگ سفید برای کل صفحه */
+    color: #fff !important;
     direction: rtl;
     min-height: 100vh;
     display: flex;
@@ -23,20 +23,51 @@ body {
 
 main { flex: 1; width: 100%; padding-bottom: 80px; }
 
-/* کادر شیشه‌ای اصلی */
+/* کادر شیشه‌ای */
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 20px; /* فاصله بین باکس‌ها */
+    padding: 25px; /* کمی پدینگ بیشتر برای خوشگلی */
+    margin-bottom: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     color: #fff !important;
 }
 
-/* باکس نام یوزر و لینک (تیره و سفید) */
+/* ورودی‌ها */
+.input-glass {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 12px 12px 40px; /* فضای خالی سمت چپ برای آیکون چشم */
+    color: white !important;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    font-size: 1rem;
+}
+.input-glass:focus { outline: 2px solid var(--orange); border-color: transparent; }
+
+/* نگهدارنده پسورد برای آیکون چشم */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.toggle-password {
+    position: absolute;
+    left: 15px; /* سمت چپ چون RTL است */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1.1rem;
+    z-index: 10;
+}
+.toggle-password:hover { color: #fff; }
+
+/* باکس نام یوزر و لینک */
 .name-badge {
     background: var(--dark-badge);
     border: 1px solid rgba(255,255,255,0.15);
@@ -48,11 +79,11 @@ main { flex: 1; width: 100%; padding-bottom: 80px; }
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    width: 100%; /* تمام عرض */
+    width: 100%;
     font-size: 1.1rem;
 }
 
-/* دکمه‌های معمولی */
+/* دکمه‌ها */
 .btn-custom {
     border: none;
     color: white !important;
@@ -65,37 +96,14 @@ main { flex: 1; width: 100%; padding-bottom: 80px; }
     transition: 0.2s;
     text-decoration: none !important;
 }
-
-/* دکمه‌های عملیاتی (کپی و QR) با ارتفاع کمتر */
-.btn-action {
-    height: 40px; /* ارتفاع کمتر طبق درخواست (70% قبلی) */
-    font-size: 0.9rem;
-}
-
-/* دکمه‌های بزرگتر (مثل خروج و ورود) */
-.btn-lg-custom {
-    height: 50px;
-    font-size: 1rem;
-}
-
+.btn-action { height: 40px; font-size: 0.9rem; }
+.btn-lg-custom { height: 50px; font-size: 1rem; }
 .btn-orange { background: var(--orange); }
 .btn-red { background: var(--red); }
 
-/* چیدمان دکمه‌ها کنار هم */
-.btn-row {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    margin-top: 15px; /* فاصله از نام لینک */
-}
+.btn-row { display: flex; gap: 10px; width: 100%; margin-top: 15px; }
 
-/* عنوان صفحه */
-.page-title {
-    color: #f0f0f0 !important;
-    font-weight: 800;
-    margin-bottom: 25px;
-    text-align: center;
-}
+.page-title { color: #f0f0f0 !important; font-weight: 800; margin-bottom: 25px; text-align: center; }
 
 /* فوتر */
 footer {
@@ -110,13 +118,20 @@ footer {
 .footer-box i { font-size: 1.5rem; color: var(--orange); margin-bottom: 5px; }
 .footer-box span { font-size: 0.8rem; font-family: 'Montserrat', sans-serif; color: #fff; }
 
-/* ورودی لاگین */
-.input-glass {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 12px;
-    color: white !important;
-    width: 100%;
-    text-align: center;
+/* تنظیمات جهت متن داینامیک */
+body[dir="ltr"] {
+    text-align: left;
+}
+body[dir="rtl"] {
+    text-align: right;
+}
+
+/* جابجایی آیکون چشم در حالت انگلیسی */
+body[dir="ltr"] .toggle-eye {
+    left: auto;
+    right: 12px;
+}
+body[dir="ltr"] .pass-container input {
+    padding-left: 15px !important;
+    padding-right: 45px !important;
 }
